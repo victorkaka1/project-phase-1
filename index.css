@@ -1,0 +1,42 @@
+.ticket-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .ticket-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .ticket-details {
+    margin-bottom: 20px;
+  }
+  
+  .ticket-details label {
+    font-weight: bold;
+  }
+  
+  .ticket-details p {
+    margin: 5px 0;
+  }
+  
+  .ticket-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+    color: black;
+    border: chocolate;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ticket-button:hover {
+    background-color: #0056b3;
+  }
+  

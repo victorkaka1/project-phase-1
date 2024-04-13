@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUS TICKET BOOKINGS</title>
+<style>
+    /* Styles for the form */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    input[type="text"], input[type="date"], input[type="number"], select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: red;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+<h2>Bus Ticket Booking</h2>
+<form id="bookingForm">
+    <label for="destination">Destination:</label>
+    <select id="destination" name="destination">
+        <option value="Nairobi">Nairobi</option>
+        <option value="Mombasa">Mombasa</option>
+        <option value="Kisumu">Kisumu</option>
+        <option value="Nakuru">Nakuru</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <label for="phone call">Phone call</label>
+    <input type="phone call>" id="phone call" name="phone call">
+
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+
+    
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time">
+
+
+    <label for="quantity">Number of Tickets:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10">
+    
+
+
+    <input type="submit" value="Book Now">
+</form>
+
+<div id="confirmation"></div>
+
+<script>
+    // JavaScript to handle form submission
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get form values
+        var destination = document.getElementById("destination").value;
+        var date = document.getElementById("date").value;
+        var quantity = document.getElementById("quantity").value;
+
+        // Display confirmation message
+        var confirmationMessage = "You have booked " + quantity + " ticket(s) to " + destination + " on " + date + ".";
+        document.getElementById("confirmation").innerHTML = confirmationMessage;
+    });
+</script>
+</body>
+</html>
